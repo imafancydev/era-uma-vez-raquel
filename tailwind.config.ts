@@ -29,6 +29,12 @@ const config: Config = {
       boxShadow: {
         'custom': '0px 17.7778px 53.3333px rgba(114, 18, 64, 0.4)',
       },
+      borderRadius: {
+        customSideNavBar: "0.375rem 0 0  0.375rem"
+      },
+      transitionDelay: {
+        transitionSideNavBar: "box-shadow: -5px -5px 9px 4px rgba(125, 120, 120, 0.3) .2s, rgba(130, 116, 116, 0.5) .2s"
+      }
     },
   },
   plugins: [],
