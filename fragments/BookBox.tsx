@@ -9,11 +9,6 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 0 },
 };
 
-const NextboxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 2 } },
-  hidden: { opacity: 0, scale: 0 },
-};
-
 const BookBox = ({ num }: any) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -29,33 +24,37 @@ const BookBox = ({ num }: any) => {
   return (
     <>
       <motion.div
-        className="box"
+        className="box shadow-2xl shadow-blue-500/20 p-5 rounded-3xl cursor-pointer"
         ref={ref}
         variants={boxVariant}
         initial="hidden"
         animate={control}
       >
-        <h1 className="text-gray-600 text-4xl">Olá raquel</h1>
-        <p className="text-gray-600 text-xl">
-          Gosto de fazer ótimas paginas como essa que você está vendo, aprender
-          programação e programar são coisas prazerosas para mim, TypeScript,
-          React, Tailwind e para mim as tecnologias mais divertidas hoje no
-          mundo tech, espero que nós se divirta junto!
+        <h1 className="bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl">
+          Nome do Livro da Raquel
+        </h1>
+        <p className="text-[#37383f] text-xl">
+          Lore do Livro Lore do Livro Lore do Livro Lore do Livro Lore do Livro
+          Lore do Livro Lore do Livro Lore do Livro Lore do Livro Lore do Livro{" "}
+          Lore do Livro Lore do Livro Lore do Livro Lore do Livro Lore do Livro
+          Lore do Livro{" "}
         </p>
       </motion.div>
       <motion.div
-        className="box"
+        className="box shadow-2xl shadow-blue-500/20 p-5 rounded-3xl cursor-pointer"
         ref={ref}
-        variants={NextboxVariant}
+        variants={boxVariant}
         initial="hidden"
         animate={control}
       >
-        <h1 className="text-gray-600 text-4xl">Olá raquel</h1>
-        <p className="text-gray-600 text-xl">
-          Gosto de fazer ótimas paginas como essa que você está vendo, aprender
-          programação e programar são coisas prazerosas para mim, TypeScript,
-          React, Tailwind e para mim as tecnologias mais divertidas hoje no
-          mundo tech, espero que nós se divirta junto!
+        <h1 className="bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl">
+          Nome do Livro da Raquel
+        </h1>
+        <p className="text-[#37383f] text-xl">
+          Lore do Livro Lore do Livro Lore do Livro Lore do Livro Lore do Livro
+          Lore do Livro Lore do Livro Lore do Livro Lore do Livro Lore do Livro{" "}
+          Lore do Livro Lore do Livro Lore do Livro Lore do Livro Lore do Livro
+          Lore do Livro{" "}
         </p>
       </motion.div>
     </>

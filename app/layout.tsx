@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/fragments/Header";
 import { Footer } from "@/fragments/Footer";
 import SideNavBar from "@/fragments/SideNavBar";
+import { LenisScroller } from "@/fragments/SmoothScroller";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -22,8 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className="bg-[#f4eaed] scroll-smooth">
+    <html lang="pt-BR" className="bg-gray-300 ">
       <body>
+        <LenisScroller />
         <section className="noise"></section>
         <SideNavBar />
         <main className={`${poppins.className}`}>

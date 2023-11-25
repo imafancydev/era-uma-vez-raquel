@@ -3,8 +3,8 @@ import React from "react";
 import BookBox from "@/fragments/BookBox";
 const BooksSections = () => {
   return (
-    <section id="#BookSection" className="flex w-full">
-      <div className="max-w-7xl w-full m-auto mt-80 flex justify-center items-center gap-5">
+    <section id="BookSection" className="w-full">
+      <div className="max-w-6xl w-full m-auto px-4 py-16 flex gap-16 flex-col justify-center items-center md:mt-96 sm:mt">
         <BookBox />
       </div>
     </section>

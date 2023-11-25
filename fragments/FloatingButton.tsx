@@ -1,9 +1,32 @@
+"use client";
+
+import Lenis from "@studio-freight/lenis";
 import React from "react";
 
 const FloatingButton = () => {
+  const lenis = new Lenis({
+    duration: 2,
+    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+    orientation: "vertical",
+    smoothTouch: true,
+    touchMultiplier: 1,
+  });
+
+  function raf(time: any) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+    event.preventDefault();
+    lenis.scrollTo("#BookSection");
+  };
   return (
-    <button
-      id="#BookSection"
+    <a
+      href="#BookSection"
+      onClick={handleClick}
       className="fixed w-[64px] h-[64px] top-[80%] left-[calc(50%-32px)] bg-custom-gradient shadow-custom border-none rounded-[50%] flex justify-center items-center cursor-pointer z-[15]"
     >
       <svg
@@ -20,7 +43,7 @@ const FloatingButton = () => {
           stroke-linecap="round"
         ></path>
       </svg>
-    </button>
+    </a>
   );
 };
 

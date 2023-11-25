@@ -9,6 +9,56 @@
   animation: animatedgradient 6s ease infinite alternate;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fafafafa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #525252;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.progress-bar {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(125.08deg, #ff1a5c -40.09%, #006fba 242.25%);
+  transform-origin: 0%;
+}
+
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;
