@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins, Cedarville_Cursive } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/fragments/Header";
 import { Footer } from "@/fragments/Footer";
-import SideNavBar from "@/fragments/SideNavBar";
 import { LenisScroller } from "@/fragments/SmoothScroller";
+import NoiseComponent from "@/fragments/Noise";
+import FSideNav from "@/fragments/SideNavBar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,11 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className="bg-gray-300 ">
+    <html lang="pt-BR" className="bg-[hsl(231,33%,83%)]">
       <body>
+        <NoiseComponent />
         <LenisScroller />
-        <section className="noise"></section>
-        <SideNavBar />
+        <FSideNav />
         <main className={`${poppins.className}`}>
           <Header />
           {children}

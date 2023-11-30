@@ -1,5 +1,7 @@
 "use client";
+
 import React, { useState } from "react";
+
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Header = () => {
@@ -100,14 +102,15 @@ const Header = () => {
               </defs>
             </svg>
           </a>
-          <button
-            onClick={() => setMenuIsOpen(!menuIsOpen)}
-            className="text-gray-800 visible md:hidden"
-          >
-            {menuIsOpen && <AiOutlineClose size={32} />}
-            {!menuIsOpen && <AiOutlineMenu size={32} />}
-          </button>
         </div>
+        <button
+          aria-controls="float-sidenav-id"
+          onClick={() => setMenuIsOpen(!menuIsOpen)}
+          className="text-gray-800 visible md:hidden"
+        >
+          {!menuIsOpen && <AiOutlineMenu size={32} />}
+          {menuIsOpen && <AiOutlineMenu size={32} />}
+        </button>
       </nav>
     </header>
   );

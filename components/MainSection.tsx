@@ -10,6 +10,7 @@ const MainSection = () => {
           className="floating"
           alt={"image"}
           src="/privacidade2.png"
+          priority
         />
       </div>
     </section>
