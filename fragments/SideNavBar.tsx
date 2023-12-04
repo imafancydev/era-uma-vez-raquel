@@ -1,8 +1,7 @@
 "use client";
 
-import Lenis from "@studio-freight/lenis";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 const FSideNav = () => {
   interface FSideNavConstructor {
@@ -11,18 +10,10 @@ const FSideNav = () => {
 
   interface FSideNavInterface {
     element: HTMLElement;
-    // ... other properties and methods
   }
 
   function FSideNav(this: FSideNavInterface, element: HTMLElement) {
     this.element = element;
-    // ... other constructor logic
-  }
-
-  const yourElement = document.getElementById("float-sidenav-id");
-  if (yourElement) {
-    const FSideNavInstance: FSideNavInterface =
-      new (FSideNav as unknown as FSideNavConstructor)(yourElement);
   }
 
   useEffect(() => {
