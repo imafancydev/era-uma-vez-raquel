@@ -1,52 +1,56 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const AboutMePage = () => {
   return (
-    <div
-      id="about"
-      className="relative bg-[hsl(231,33%,83%)] overflow-hidden mt-16"
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-[hsl(231,33%,83%)] sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <div className="pt-1"></div>
-
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left">
-              <h2 className="my-6 bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl font-bold sm:text-3xl md:text-4xl">
-                About me
-              </h2>
-
-              <p className="text-[#37383f]">
-                Donec porttitor, enim ut dapibus lobortis, lectus sem tincidunt
-                dui, eget ornare lectus ex non libero. Nam rhoncus diam ultrices
-                porttitor laoreet. Ut mollis fermentum ex, vel viverra lorem
-                volutpat sodales. In ornare porttitor odio sit amet laoreet. Sed
-                laoreet, nulla a posuere ultrices, purus nulla tristique turpis,
-                hendrerit rutrum augue quam ut est. Fusce malesuada posuere
-                libero, vitae dapibus eros facilisis euismod. Sed sed lobortis
-                justo, ut tincidunt velit. Mauris in maximus eros.
-              </p>
-            </div>
-          </main>
-        </div>
-      </div>
-      <div className="flex items-center justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <div className="mx-auto flex flex-col max-w-5xl justify-between gap-10 overflow-hidden px-5 py-8 xl:px-0">
+      <h1 className="flex bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent font-bold items-start text-4xl">
+        Sobre mim
+      </h1>
+      <div className="flex flex-col md:flex-row align-center justify-between w-full gap-5">
         <Image
           width={400}
           height={900}
           alt={"image"}
           src={require("@/public/raquelImg.jpeg")}
         />
-      </div>
-      <div className="mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-        <Link
-          href="./"
-          className="my-6 bg-gradient-to-r from-blue-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl font-bold sm:text-3xl md:text-4xl hover:shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)] rounded-3xl transition duration-300 text-center"
-        >
-          Voltar
-        </Link>
+        <div className="flex flex-col gap-5 max-w-lg text-[#37383f] text-base leading-relaxed">
+          <p>
+            Meu nome é <i className="text-white">Raquel</i> e tenho{" "}
+            <span className="text-white font-bold">19</span> anos.
+          </p>
+          <p>
+            Sou um Lorem, ipsum dolor.{" "}
+            <span className="italic font-bold">0</span> Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Maiores hic similique molestiae
+            harum perspiciatis deserunt cupiditate ipsa alias enim? Nihil.:{" "}
+            <span className="italic">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+              fuga.
+            </span>
+            .
+          </p>
+          <p>
+            Ao longo da minha trajetória como Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Error laboriosam nisi tenetur
+            blanditiis sit accusamus facilis eum ratione. Aut, magni.
+          </p>
+          <p>
+            Além disso, gosto de Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Illo, fuga.
+            <i>
+              <a
+                className="underline text-white"
+                href="https://birobirobiro.dev/mediakit"
+                target="_blank"
+              >
+                {" "}
+                redes sociais
+              </a>
+              .
+            </i>
+          </p>
+        </div>
       </div>
     </div>
   );

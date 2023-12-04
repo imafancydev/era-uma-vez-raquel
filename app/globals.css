@@ -27,7 +27,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #525252;
 }
-
+/* 
 html.lenis {
   height: auto;
 }
@@ -46,15 +46,15 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
+} */
 
 .progress-bar {
-  z-index: 9;
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
+  height: 3px;
   background: linear-gradient(125.08deg, #ff1a5c -40.09%, #006fba 242.25%);
   transform-origin: 0%;
 }
@@ -126,8 +126,7 @@ html.lenis {
 
 .float-sidenav__nav {
   background-color: hsl(0, 0%, 100%);
-  padding: clamp(0.75rem, calc(0.75rem + 0vw), 075rem) 0
-    clamp(1.5rem, calc(1.125rem + 0.78125vw), 1.75rem);
+  padding: 18px 38px 18px 38px;
   max-height: 100%;
   overflow: auto;
   box-shadow: 0 0.9px 1.25px hsla(230, 13%, 9%, 0.025),
@@ -140,8 +139,8 @@ html.lenis {
   padding: clamp(0.5rem, calc(0.5rem + 0vw), 0.5rem)
     clamp(1.5rem, calc(1.125rem + 0.78125vw), 1.75rem);
   font-size: clamp(1.1875rem, calc(0.90625rem + 0.5859375vw), 1.375rem);
-  color: hsl(230, 7%, 23%);
   text-decoration: none;
+  color: hsl(230, 7%, 23%);
 }
 
 .float-sidenav__link--selected {
@@ -228,8 +227,8 @@ html.lenis {
   .float-sidenav__marker {
     display: inline-block;
     flex-shrink: 0;
-    height: 6px;
-    width: 6px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: hsla(230, 13%, 9%, 0.2);
     box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.25);
@@ -265,4 +264,20 @@ html.lenis {
   .float-sidenav__close-btn {
     display: none;
   }
+}
+
+.icon--xs {
+  ---size: 16px;
+}
+
+.icon {
+  ---size: 1em;
+  height: var(---size);
+  width: var(---size);
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
 }

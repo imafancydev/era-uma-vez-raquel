@@ -6,10 +6,6 @@ import React from "react";
 const FloatingButton = () => {
   const lenis = new Lenis({
     duration: 2,
-    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-    orientation: "vertical",
-    smoothTouch: true,
-    touchMultiplier: 1,
   });
 
   function raf(time: any) {
@@ -23,6 +19,7 @@ const FloatingButton = () => {
     event.preventDefault();
     lenis.scrollTo("#BookSection");
   };
+
   return (
     <a
       href="#BookSection"

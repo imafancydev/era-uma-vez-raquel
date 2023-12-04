@@ -8,10 +8,10 @@ const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
-    <header className="mt-8 w-full flex md:mt-12">
+    <header id="#inicio" className="mt-8 w-full flex md:mt-12">
       <nav className="max-w-7xl w-full flex items-center justify-between container mx-6 md:m-auto ">
         <div className="w-full flex items-center justify-between md:mx-6 ">
-          <a href="#inicio">
+          <a href="./#inicio">
             <svg
               width="166"
               height="54"

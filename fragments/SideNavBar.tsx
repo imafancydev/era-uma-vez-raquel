@@ -1,6 +1,8 @@
 "use client";
+
+import Lenis from "@studio-freight/lenis";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const FSideNav = () => {
   interface FSideNavConstructor {
@@ -174,8 +176,6 @@ const FSideNav = () => {
       nav.selectedTrigger = false;
     }
 
-    const intersectionObserverSupported = true; // Replace with actual logic
-
     // Call your FSideNav function with the desired element ID or element reference
     const yourElement = document.getElementById("float-sidenav-id");
     if (yourElement) {
@@ -203,12 +203,30 @@ const FSideNav = () => {
           </svg>
         </button>
         <ul className="js-float-sidenav__list">
-          <Link className="float-sidenav__link" href="#BookSection">
-            Livros
-          </Link>
-          <Link className="float-sidenav__link" href={"./AboutMe"}>
-            Sobre Mim
-          </Link>
+          <li>
+            <Link
+              className="float-sidenav__link font-bold cursor-pointer"
+              href={"./#inicio"}
+            >
+              <span className="float-sidenav__label">Início</span>
+              <span className="float-sidenav__marker" aria-hidden="true"></span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="float-sidenav__link font-bold"
+              href={"./#BookSection"}
+            >
+              <span className="float-sidenav__label">Livros</span>
+              <span className="float-sidenav__marker" aria-hidden="true"></span>
+            </Link>
+          </li>
+          <li>
+            <Link className="float-sidenav__link font-bold" href={"./AboutMe"}>
+              <span className="float-sidenav__label">Sobre mim</span>
+              <span className="float-sidenav__marker" aria-hidden="true"></span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
